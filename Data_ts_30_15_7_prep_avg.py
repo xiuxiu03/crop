@@ -4,7 +4,7 @@ import pandas as pd
 data_dir="data_subset"
 
 print("Data Loading")
-X=np.load("%s/mg_weather_variables_other_test_data_TS_214_days.npy"%(data_dir))
+X=np.load("%s/mg_weather_variables_all_data_TS_214_days.npy"%(data_dir))
 
 X= X[:, 0:210, :]  # 4 days dropped 
 
@@ -78,6 +78,6 @@ for count in range(0, n_samples):
     X_monthly [count, :, :] = data_reshape (X_count, 30)
     print(count)        
   
-np.save("%s/mg_weather_variables_other_test_data_TS_30_weeks_prep_avg"%(data_dir), X_weekly)
-np.save("%s/mg_weather_variables_other_test_data_TS_15_biweekly_prep_avg"%(data_dir), X_biweekly)
-np.save("%s/mg_weather_variables_other_test_data_TS_7_months_prep_avg"%(data_dir), X_monthly)
+np.save("%s/mg_weather_variables_all_data_TS_30_weeks_prep_avg"%(data_dir), X_weekly)
+np.save("%s/mg_weather_variables_all_data_TS_15_biweekly_prep_avg"%(data_dir), X_biweekly)
+np.save("%s/mg_weather_variables_all_data_TS_7_months_prep_avg"%(data_dir), X_monthly)
