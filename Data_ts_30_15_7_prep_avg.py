@@ -4,7 +4,7 @@ import pandas as pd
 data_dir="data_subset"
 
 print("Data Loading")
-X=np.load("%s/mg_weather_variables_all_data_TS_214_days.npy"%(data_dir))
+X=np.load("%s/mg_weather_variables_all_data_TS_214_days.npy"%(data_dir),allow_pickle=True)
 
 X= X[:, 0:210, :]  # 4 days dropped 
 
