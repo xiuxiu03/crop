@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-data_dir="Data_Reframed"
+data_dir="data_subset"
 
 print("Data Loading")
 X=np.load("%s/mg_weather_variables_other_test_data_TS_214_days.npy"%(data_dir))
